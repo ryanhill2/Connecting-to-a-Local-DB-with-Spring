@@ -9,7 +9,7 @@ import javax.persistence.Id
 data class Driver(
         var DriverId: String? = null,
         var DriverRef: String? = null,
-        var DriverNumber: Double? = null,
+        var DriverNumber: String? = null,
         var DriverCode: String? = null,
         var fName: String? = null,
         var surName: String? = null,
