@@ -16,12 +16,4 @@ class DriverController(val driverService: DriverService) {
   fun createrace(){
     return driverService.createRace()
   }
-
-  @PostMapping("/{userId}")
-  fun getPost (@PathVariable("userId") userId: String): Post{
-    var restTemplate = RestTemplate()
-    var post = restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts", Post.class)
-
-    return
-  }
 }
