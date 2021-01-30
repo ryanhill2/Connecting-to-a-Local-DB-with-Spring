@@ -13,5 +13,12 @@ interface DriverRepository: JpaRepository<Driver, Long>
 //          value = "SELECT * FROM driver",
           nativeQuery = true
   )
-  fun haha(): List<Any>
+  fun haha(): List<DriverList>
+
+  @Query(
+          value = "insert into driver (Driver_Code) VALUES ('RTH');",
+//          value = "SELECT * FROM driver",
+          nativeQuery = true
+  )
+  fun createARace()
 }
